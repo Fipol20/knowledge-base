@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: kb
       POSTGRES_DB: kb
     ports:
-      - "5434:5432"
+      - "5432:5432"
     volumes:
       - kb_db_data:/var/lib/postgresql/data
     healthcheck:
@@ -23,7 +23,7 @@ services:
     environment:
       DATABASE_URL: postgresql+psycopg2://kb:kb@db:5432/kb
     ports:
-      - "8002:8000"
+      - "8000:8000"
 
 volumes:
   kb_db_data:
